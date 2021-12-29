@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewOfActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProfile"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/SectionOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CC0A1F83">
+
+                <CheckBox
+                    android:id="@+id/chbReading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reading"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeaderChb" />
+
+                <CheckBox
+                    android:id="@+id/chbPlaying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/playing"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/chbReading"
+                    app:layout_constraintTop_toTopOf="@id/chbReading" />
+
+                <CheckBox
+                    android:id="@+id/chbTraveling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/traveling"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/chbPlaying"
+                    app:layout_constraintTop_toTopOf="@id/chbPlaying" />
+
+                <RadioGroup
+                    android:id="@+id/rgSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeaderRg">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_man_icon" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_female_icon" />
+
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/spinnerCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:minHeight="48dp"
+                    android:prompt="@string/hint_Spinner_Country"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titEmailAddress" />
+
+                <TextView
+                    android:id="@+id/tvPersonalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/personal_details"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHeaderRg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_sex"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titBirthDate" />
+
+                <TextView
+                    android:id="@+id/tvHeaderChb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_hobbies"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rgSex" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titFullName"
+                    style="@style/ForEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/enter_full_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPersonalDetails"
+                    app:startIconDrawable="@drawable/ic_name_icon">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titPhoneNumber"
+                    style="@style/ForEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/enter_phone_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titFullName"
+                    app:startIconDrawable="@drawable/ic_call_icon">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:focusable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titEmailAddress"
+                    style="@style/ForEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/enter_email_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titPhoneNumber"
+                    app:startIconDrawable="@drawable/ic_mail_icon">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:inputType="textEmailAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titAddress"
+                    style="@style/ForEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/enter_address"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerCountry"
+                    app:startIconDrawable="@drawable/ic_address_icon">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/titBirthDate"
+                    style="@style/ForEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/enter_date_of_birth"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titAddress"
+                    app:startIconDrawable="@drawable/ic_calendar_icon">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tetBirthDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textMultiLine"
+                        android:focusable="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#CC0A1F83">
+
+                <SeekBar
+                    android:id="@+id/skbPercentageFirst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:max="100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvPercentageSscHsc"
+                    app:layout_constraintTop_toBottomOf="@id/tvPercentageSscHsc" />
+
+                <SeekBar
+                    android:id="@+id/skbPercentageTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:max="100"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvPercentageBComBca"
+                    app:layout_constraintTop_toBottomOf="@id/tvPercentageBComBca" />
+
+                <Spinner
+                    android:id="@+id/spinnerBComBCA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:prompt="@string/hint_Spinner_BCA_BCom"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/skbPercentageFirst" />
+
+                <Spinner
+                    android:id="@+id/spinnerSscHsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvEducationDetails"/>
+                <TextView
+                    android:id="@+id/tvPercentageSscHsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerSscHsc"/>
+                <TextView
+                    android:id="@+id/tvPercentageBComBca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerBComBCA"/>
+                <TextView
+                    android:id="@+id/tvEducationDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/education_details"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="#6173CD"
+                android:text="@string/signup" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="personal_details" translatable="false">અંગત વિગતો</string>
+    <string name="education_details" translatable="false">શિક્ષણની વિગત</string>
+    <string name="enter_full_name">પૂરું નામ દાખલ કરો</string>
+    <string name="enter_phone_number">ફોન નંબર દાખલ કરો</string>
+    <string name="enter_email_address">ઈમેલ સરનામું દાખલ કરો</string>
+    <string name="enter_address">સરનામું દાખલ કરો</string>
+    <string name="enter_date_of_birth">જન્મ તારીખ દાખલ કરો</string>
+    <string name="male">પુરુષ</string>
+    <string name="select_sex">જાતિ પસંદ કરો</string>
+    <string name="female">સ્ત્રી</string>
+    <string name="reading">વાંચન</string>
+    <string name="playing">રમવું</string>
+    <string name="traveling">મુસાફરી</string>
+    <string name="select_hobbies">શોખ પસંદ કરો</string>
+    <string name="hint_Spinner_Country">દેશ પસંદ કરો</string>
+    <string name="hint_Spinner_SSC_HSC">શિક્ષણ વિગતો પસંદ કરો</string>
+    <string name="hint_Spinner_BCA_BCom">શિક્ષણ વિગતો પસંદ કરો</string>
+    <string-array name="Country">
+        <item>ભારત</item>
+        <item>યૂુએસએ</item>
+        <item>યુ.કે</item>
+        <item>ઓસ્ટ્રેલિયા</item>
+    </string-array>
+    <string-array name="educationOne">
+        <item>એસ.એસ.સી</item>
+        <item>એચ.એસ.સી</item>
+    </string-array>
+    <string-array name="educationTwo">
+        <item>બી.કોમ</item>
+        <item>બીસીએ</item>
+    </string-array>
+    <string name="percentage">ટકાવારી</string>
+</resources>

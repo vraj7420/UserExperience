@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">AssignmentUserExperience</string>
+    <string name="sectionOne" translatable="false">SectionOne</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="education_details">Education Details</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="enter_date_of_birth">Enter Date Of Birth</string>
+    <string name="male">Male</string>
+    <string name="select_sex">Select Sex:</string>
+    <string name="female">Female</string>
+    <string name="reading">Reading</string>
+    <string name="playing">Playing</string>
+    <string name="traveling">Traveling</string>
+    <string name="select_hobbies">Select Hobbies</string>
+    <string name="hint_Spinner_Country">Select Country</string>
+    <string name="hint_Spinner_SSC_HSC">Select Eduction Details</string>
+    <string name="hint_Spinner_BCA_BCom">Select Eduction Details</string>
+    <string name="signup" translatable="false">SignUp</string>
+    <string name="percentage">Percentage</string>
+
+    <string-array name="Country">
+        <item>India</item>
+        <item>USA</item>
+        <item>U.K</item>
+        <item>Australia</item>
+    </string-array>
+    <string-array name="educationOne">
+        <item>S.S.C</item>
+        <item>H.S.C</item>
+    </string-array>
+    <string-array name="educationTwo">
+        <item>B.Com</item>
+        <item>BCA</item>
+    </string-array>
+</resources>
