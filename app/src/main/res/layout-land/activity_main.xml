@@ -26,7 +26,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:background="#CC0A1F83"
+        android:background="#BE2CBC6D"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProfile"
         app:layout_constraintBottom_toTopOf="@id/btnSignup"
@@ -232,6 +232,7 @@
             android:id="@+id/tvPersonalDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="@string/personal_details"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -251,7 +252,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
-        android:background="#CC0A1F83"
+        android:background="#BE2CBC6D"
         app:layout_constraintBottom_toTopOf="@id/btnSignup">
 
         <TextView
@@ -262,6 +263,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/tvEducationDetails"
+            android:textColor="@color/black"
             android:textStyle="bold"/>
         <ScrollView
             android:id="@+id/scrollViewSection2"
@@ -352,7 +354,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/btnSignup"
-        android:background="#6173CD"
+        android:textColor="@color/black"
+        android:background="#BE2CBC6D"
         android:text="@string/signup"
         app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

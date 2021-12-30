@@ -24,20 +24,20 @@
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProfile"
-        app:layout_constraintVertical_bias="0.0">
-
+        app:layout_constraintTop_toBottomOf="@id/tvProfile">
         <LinearLayout
+
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical">
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/SectionOne"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#CC0A1F83">
+                android:background="@color/ColorForBackground">
 
                 <CheckBox
                     android:id="@+id/chbReading"
@@ -47,6 +47,7 @@
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     android:textStyle="bold"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvHeaderChb" />
 
@@ -77,6 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvHeaderRg">
 
@@ -98,6 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:minHeight="48dp"
+                    android:layout_marginStart="20dp"
                     android:prompt="@string/hint_Spinner_Country"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/titEmailAddress" />
@@ -108,6 +111,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/personal_details"
                     android:textSize="20sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -119,6 +123,8 @@
                     android:text="@string/select_sex"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/titBirthDate" />
@@ -131,6 +137,8 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/rgSex" />
 
@@ -236,7 +244,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:background="#CC0A1F83">
+                android:background="#BE2CBC6D">
 
                 <SeekBar
                     android:id="@+id/skbPercentageFirst"
@@ -276,8 +284,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:minHeight="48dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvEducationDetails"/>
+                    app:layout_constraintTop_toBottomOf="@id/tvEducationDetails" />
                 <TextView
                     android:id="@+id/tvPercentageSscHsc"
                     android:layout_width="wrap_content"
@@ -307,6 +316,7 @@
                     android:text="@string/education_details"
                     android:textSize="20sp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -317,9 +327,11 @@
                 android:layout_height="37dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:background="#6173CD"
+                android:background="#BE2CBC6D"
+                android:textColor="@color/black"
                 android:text="@string/signup" />
-        </LinearLayout>
+        </LinearLayout
+            >
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
