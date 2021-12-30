@@ -1,4 +1,4 @@
-package com.example.assignmentuserexpireance
+package com.example.assignmentUserExprieance
 
 import org.junit.Test
 

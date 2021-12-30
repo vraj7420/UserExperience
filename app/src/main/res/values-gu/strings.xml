@@ -17,6 +17,18 @@
     <string name="hint_Spinner_Country">દેશ પસંદ કરો</string>
     <string name="hint_Spinner_SSC_HSC">શિક્ષણ વિગતો પસંદ કરો</string>
     <string name="hint_Spinner_BCA_BCom">શિક્ષણ વિગતો પસંદ કરો</string>
+    <string name="errorFullName" >કૃપા કરીને નામ દાખલ કરો</string>
+    <string name="errorPhoneNumberIsEmpty">કૃપા કરીને ફોન નંબર દાખલ કરો</string>
+    <string name="errorPhoneNumberValid">કૃપા કરીને માન્ય ફોન નંબર દાખલ કરો</string>
+    <string name="errorEmailValid">કૃપા કરીને માન્ય ઇમેઇલ સરનામું દાખલ કરો</string>
+    <string name="errorEmailIsEmpty">કૃપા કરીને ઇમેઇલ સરનામું દાખલ કરો</string>
+    <string name="errorAddress">કૃપા કરીને સરનામું દાખલ કરો</string>
+    <string name="errorBirthIsEmpty">કૃપા કરીને જન્મ તારીખ દાખલ કરો</string>
+    <string name="selected_values">પસંદ કરેલ મૂલ્યો</string>
+
+
+
+
     <string-array name="Country">
         <item>ભારત</item>
         <item>યૂુએસએ</item>
