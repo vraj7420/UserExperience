@@ -19,18 +19,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tetAddress: TextInputEditText
     private lateinit var tetBirthDate: TextInputEditText
     private lateinit var skbPercentageSscHsc: SeekBar
-    private lateinit var chbReading:CheckBox
-    private lateinit var chbPlaying:CheckBox
-    private lateinit var chbTraveling:CheckBox
-    private lateinit var rbMale:RadioButton
-    private lateinit var rbFemale:RadioButton
+    private lateinit var chbReading: CheckBox
+    private lateinit var chbPlaying: CheckBox
+    private lateinit var chbTraveling: CheckBox
+    private lateinit var rbMale: RadioButton
+    private lateinit var rbFemale: RadioButton
     private lateinit var skbPercentageBComBCA: SeekBar
     private lateinit var btnSignup: Button
-    private lateinit var tvSelectedValues:TextView
+    private lateinit var tvSelectedValues: TextView
     private lateinit var tvPercentageSscHsc: TextView
     private lateinit var tvPercentageBComBCA: TextView
-    private  var chbValue=""
-    private  var rbGenderValue=""
+    private var chbValue = ""
+    private var rbGenderValue = ""
     private val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     private var cal: Calendar = Calendar.getInstance()
 
@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
         spinnerCountry = findViewById(R.id.spinnerCountry)
         spinnerSscHsc = findViewById(R.id.spinnerSscHsc)
         spinnerBComBCA = findViewById(R.id.spinnerBComBCA)
-        tvSelectedValues=findViewById(R.id.tvSelectedValues)
-        rbMale=findViewById(R.id.rbMale)
-        rbFemale=findViewById(R.id.rbFemale)
-        chbReading=findViewById(R.id.chbReading)
-        chbPlaying=findViewById(R.id.chbPlaying)
-        chbTraveling=findViewById(R.id.chbTraveling)
+        tvSelectedValues = findViewById(R.id.tvSelectedValues)
+        rbMale = findViewById(R.id.rbMale)
+        rbFemale = findViewById(R.id.rbFemale)
+        chbReading = findViewById(R.id.chbReading)
+        chbPlaying = findViewById(R.id.chbPlaying)
+        chbTraveling = findViewById(R.id.chbTraveling)
         val dataSpinnerCountry = resources.getStringArray(R.array.Country)
         val adapterSpinnerCountry =
             ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, dataSpinnerCountry)
@@ -109,53 +109,53 @@ class MainActivity : AppCompatActivity() {
         }
         btnSignup.setOnClickListener {
             if (tetFullName.text.toString().trim().isEmpty()) {
-                tetFullName.error =resources.getString(R.string.errorFullName)
+                tetFullName.error = resources.getString(R.string.errorFullName)
                 tetFullName.requestFocus()
-            } else if (tetPhoneNumber.text.toString().trim().isEmpty() ) {
-                tetPhoneNumber.error =resources.getString(R.string.errorPhoneNumberIsEmpty)
+            } else if (tetPhoneNumber.text.toString().trim().isEmpty()) {
+                tetPhoneNumber.error = resources.getString(R.string.errorPhoneNumberIsEmpty)
                 tetPhoneNumber.requestFocus()
-            }else if(tetPhoneNumber.text.toString().length != 10){
-                tetPhoneNumber.error=resources.getString(R.string.errorPhoneNumberValid)
+            } else if (tetPhoneNumber.text.toString().length != 10) {
+                tetPhoneNumber.error = resources.getString(R.string.errorPhoneNumberValid)
                 tetPhoneNumber.requestFocus()
 
-            }else if(tetEmailAddress.text.toString().trim().isEmpty()){
-                tetEmailAddress.error=resources.getString(R.string.errorEmailIsEmpty)
+            } else if (tetEmailAddress.text.toString().trim().isEmpty()) {
+                tetEmailAddress.error = resources.getString(R.string.errorEmailIsEmpty)
                 tetEmailAddress.requestFocus()
-            }
-            else if (!tetEmailAddress.text.toString().trim().matches(emailPattern.toRegex())) {
+            } else if (!tetEmailAddress.text.toString().trim().matches(emailPattern.toRegex())) {
                 tetEmailAddress.error = resources.getString(R.string.errorEmailValid)
                 tetEmailAddress.requestFocus()
             } else if (tetAddress.text.toString().trim().isEmpty()) {
-                tetAddress.error =resources.getString(R.string.errorAddress)
+                tetAddress.error = resources.getString(R.string.errorAddress)
                 tetAddress.requestFocus()
             } else if (tetBirthDate.text.toString().trim().isEmpty()) {
-                tetBirthDate.error =resources.getString(R.string.errorBirthIsEmpty)
+                tetBirthDate.error = resources.getString(R.string.errorBirthIsEmpty)
                 tetBirthDate.requestFocus()
-            }else{
-                if(chbReading.isChecked){
-                    chbValue += "\n"+chbReading.text.toString()
+            } else {
+                if (chbReading.isChecked) {
+                    chbValue += "\n" + chbReading.text.toString()
                 }
-                if(chbPlaying.isChecked){
-                    chbValue+="\n"+chbPlaying.text.toString()
+                if (chbPlaying.isChecked) {
+                    chbValue += "\n" + chbPlaying.text.toString()
                 }
-                if(chbTraveling.isChecked){
-                    chbValue+="\n"+chbTraveling.text.toString()
+                if (chbTraveling.isChecked) {
+                    chbValue += "\n" + chbTraveling.text.toString()
                 }
 
-                rbGenderValue += if(rbMale.isChecked){
+                rbGenderValue += if (rbMale.isChecked) {
                     resources.getString(R.string.male)
 
-                } else{
+                } else {
                     resources.getString(R.string.female)
                 }
-                var temp=resources.getString(R.string.selected_values)+"\n"+":"+spinnerCountry.selectedItem.toString()+chbValue+"\n"+rbGenderValue+"\n"+spinnerSscHsc.selectedItem.toString()
-                temp+=resources.getString(R.string.percentage)+":"+skbPercentageSscHsc.progress.toString()+"%"
-                temp+="\n"+spinnerBComBCA.selectedItem.toString()
-                temp+=resources.getString(R.string.percentage)+":"+skbPercentageBComBCA.progress.toString()+"%"
-                tvSelectedValues.text=temp
-                temp=""
-                rbGenderValue=""
-                chbValue=""
+                var temp =
+                    resources.getString(R.string.selected_values) + "\n" + ":" + spinnerCountry.selectedItem.toString() + chbValue + "\n" + rbGenderValue + "\n" + spinnerSscHsc.selectedItem.toString()
+                temp += resources.getString(R.string.percentage) + ":" + skbPercentageSscHsc.progress.toString() + "%"
+                temp += "\n" + spinnerBComBCA.selectedItem.toString()
+                temp += resources.getString(R.string.percentage) + ":" + skbPercentageBComBCA.progress.toString() + "%"
+                tvSelectedValues.text = temp
+                temp = ""
+                rbGenderValue = ""
+                chbValue = ""
             }
         }
         skbPercentageSscHsc.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {

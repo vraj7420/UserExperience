@@ -110,6 +110,7 @@
                     android:layout_marginTop="20sp"
                     android:prompt="@string/hint_Spinner_Country"
                     tools:ignore="SpeakableTextPresentCheck" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/titAddress"
                     style="@style/ForEditText"
@@ -192,6 +193,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -226,7 +228,6 @@
                 </LinearLayout>
 
 
-
             </LinearLayout>
 
         </ScrollView>
@@ -244,6 +245,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -251,7 +253,7 @@
         app:layout_constraintStart_toEndOf="@id/SectionOne"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvProfile"
-       android:layout_marginStart="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
@@ -267,7 +269,8 @@
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/tvEducationDetails"
             android:textColor="@color/black"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <ScrollView
             android:id="@+id/scrollViewSection2"
             android:layout_width="match_parent"
@@ -277,91 +280,98 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvEducationDetails">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/spinnerSscHsc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:minHeight="48dp"
-                android:prompt="@string/hint_Spinner_SSC_HSC"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="SpeakableTextPresentCheck" />
-        <SeekBar
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/skbPercentageSscHsc"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/tvPercentageSscHsc"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="40dp"
-            android:max="100"
-            app:layout_constraintStart_toStartOf="@id/tvPercentageSscHsc"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <Spinner
-            android:id="@+id/spinnerBComBCA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
-            android:minHeight="48dp"
-            android:prompt="@string/hint_Spinner_BCA_BCom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/skbPercentageSscHsc"
-            tools:ignore="SpeakableTextPresentCheck" />
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/skbPercentageBComBCA"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/tvPercentageBComBca"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginEnd="40dp"
-            android:max="100"
-            app:layout_constraintStart_toStartOf="@id/tvPercentageBComBca"/>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvPercentageSscHsc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/percentage"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="60dp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/spinnerSscHsc"/>
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvPercentageBComBca"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/percentage"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="60dp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/spinnerBComBCA"/>
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                android:id="@+id/tvSelectedValues"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/skbPercentageBComBCA"
-                android:layout_marginStart="40dp"
-                android:text="@string/selected_values"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <Spinner
+                    android:id="@+id/spinnerSscHsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:minHeight="48dp"
+                    android:prompt="@string/hint_Spinner_SSC_HSC"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <SeekBar
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbPercentageSscHsc"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPercentageSscHsc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="40dp"
+                    android:max="100"
+                    app:layout_constraintStart_toStartOf="@id/tvPercentageSscHsc" />
+
+                <Spinner
+                    android:id="@+id/spinnerBComBCA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:minHeight="48dp"
+                    android:prompt="@string/hint_Spinner_BCA_BCom"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/skbPercentageSscHsc"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/skbPercentageBComBCA"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPercentageBComBca"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:max="100"
+                    app:layout_constraintStart_toStartOf="@id/tvPercentageBComBca" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPercentageSscHsc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="60dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerSscHsc" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPercentageBComBca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/percentage"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="60dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerBComBCA" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/tvSelectedValues"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/skbPercentageBComBCA"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/selected_values" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -371,5 +381,5 @@
         android:textColor="@color/black"
         android:background="#BE2CBC6D"
         android:text="@string/signup"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

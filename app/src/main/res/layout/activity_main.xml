@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
@@ -25,6 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProfile">
+
         <LinearLayout
 
             android:id="@+id/linearLayout1"
@@ -118,6 +120,7 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvHeaderRg"
                     android:layout_width="wrap_content"
@@ -179,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="number"
-                        android:focusable="true"/>
+                        android:focusable="true" />
                 </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -238,7 +241,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:inputType="textMultiLine"
-                        android:focusable="false"/>
+                        android:focusable="false" />
                 </com.google.android.material.textfield.TextInputLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -323,6 +326,7 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <com.google.android.material.textview.MaterialTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -333,7 +337,7 @@
                     android:textColor="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:textStyle="bold"
-                    android:text="@string/selected_values"/>
+                    android:text="@string/selected_values" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.button.MaterialButton
